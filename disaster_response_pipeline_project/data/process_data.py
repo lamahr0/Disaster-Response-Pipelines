@@ -56,6 +56,7 @@ def clean_data(df):
     df = pd.concat([df , categories], axis = 1)
     # drop duplicates
     df = df.drop_duplicates()
+    # replace the values of 2 with 0 to help with the imbalance 
     df['related'] = df['related'].replace(2,0)
     
     
